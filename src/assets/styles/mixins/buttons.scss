@@ -1,0 +1,21 @@
+@mixin btn_base {
+  @include transparent();
+  padding: 12px 16px;
+  font-family: $font-family-title;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  border-radius: 48px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+
+  @include mq(desktop) {
+    padding: 24px 32px;
+    font-size: 32px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
