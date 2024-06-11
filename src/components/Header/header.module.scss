@@ -5,17 +5,57 @@
   padding-top: 24px;
 
   &_nav {
+    position: relative;
     display: flex;
     justify-content: space-between;
-    // color: $secondary-text;
-    font-family: $font-family-text;
-    font-weight: 300;
+    font-size: 18px;
+    line-height: 2.44;
+  }
+
+  &_logo {
+    width: 72px;
+
+    @include mq(mobile-only) {
+      width: 48px;
+    }
+
+    @include mq(desktop) {
+      width: 72px;
+    }
+
   }
 
   &_menu {
     display: flex;
     gap: 48px;
+
+    @include mq(mobile-only) {
+      position: absolute;
+      right: 0;
+      top: 56px;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 12px;
+      background-color: $accent;
+      color: $main-text;
+      border-radius: 12px;
+      padding: 8px;
+      width: 303px;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: height 0.3s ease, opacity 0.3s ease;
+    }
+
+    &.open {
+      @include mq(mobile-only) {
+        height: 172px;
+        opacity: 1;
+      }
+    }
   }
+
+
 
   &_item {
     transition: color ease 0.3s;
@@ -25,4 +65,15 @@
       transition: color ease 0.3s;
     }
   }
+
+  &_burger {
+    display: none;
+
+    @include mq(mobile-only) {
+      display: block;
+      cursor: pointer;
+    }
+
+  }
+
 }
