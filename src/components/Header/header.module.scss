@@ -1,3 +1,28 @@
 .header {
+  position: absolute;
+  right: 0;
+  left: 0;
   padding-top: 24px;
+
+  &_nav {
+    display: flex;
+    justify-content: space-between;
+    // color: $secondary-text;
+    font-family: $font-family-text;
+    font-weight: 300;
+  }
+
+  &_menu {
+    display: flex;
+    gap: 48px;
+  }
+
+  &_item {
+    transition: color ease 0.3s;
+
+    &:hover {
+      color: $accent;
+      transition: color ease 0.3s;
+    }
+  }
 }
