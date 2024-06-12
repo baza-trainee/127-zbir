@@ -27,6 +27,10 @@ body {
   max-width: 100%;
   width: 100%;
 
+  @include mq(tablet) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
   @include mq(desktop) {
     padding-left: 64px;
     padding-right: 64px;
@@ -43,6 +47,7 @@ body {
   @include btn_base();
   color: $main-text;
   background-color: $accent;
+  border: 2px solid transparent;
 
   &:hover,
   &:focus {
@@ -74,12 +79,17 @@ body {
 }
 
 .title {
+  margin-bottom: 32px;
   font-family: $font-family-title;
   font-size: 24px;
   font-weight: 500;
   line-height: normal;
 
+  @include mq(tablet) {
+    font-size: 40px;
+  }
   @include mq(desktop) {
+    margin-bottom: 56px;
     font-size: 48px;
   }
 }
@@ -91,6 +101,9 @@ body {
   line-height: normal;
   background-color: $accent;
 
+  @include mq(tablet) {
+    font-size: 28px;
+  }
   @include mq(desktop) {
     font-size: 32px;
   }
@@ -101,6 +114,9 @@ body {
   font-size: 16px;
   font-weight: 300;
 
+  @include mq(tablet) {
+    font-size: 28px;
+  }
   @include mq(desktop) {
     font-size: 32px;
     line-height: 1.38;
@@ -122,17 +138,18 @@ body {
 }
 .swiper .swiper-wrapper {
   padding-bottom: 16px;
-  @include mq(desktop) {
+  @include mq(tablet) {
     padding-bottom: 32px;
   }
 }
+
 .swiper .swiper-pagination-bullet {
   bottom: 0;
   width: 4px;
   height: 4px;
   background-color: $main-text;
   opacity: 1;
-  @include mq(desktop) {
+  @include mq(tablet) {
     width: 8px;
     height: 8px;
   }

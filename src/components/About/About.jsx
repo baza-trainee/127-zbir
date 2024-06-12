@@ -1,11 +1,10 @@
 import { Slider } from "./Slider";
-import S from "./about.module.scss";
 
 const About = () => {
   return (
     <section id="about" className="section about">
       <div className="container">
-        <h2 className={`title ${S.about__title}`}>Про бригаду</h2>
+        <h2 className="title">Про бригаду</h2>
         <Slider />
         <p className="text">
           <span>
