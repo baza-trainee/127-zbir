@@ -9,6 +9,7 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 body {
   font-family: $font-family-text;
   font-size: 16px;
@@ -23,7 +24,7 @@ body {
   margin: 0 auto;
   padding-left: 16px;
   padding-right: 16px;
-  max-width: 430px;
+  max-width: 100%;
   width: 100%;
 
   @include mq(desktop) {
@@ -32,6 +33,7 @@ body {
     max-width: 1440px;
   }
 }
+
 .section {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -47,11 +49,13 @@ body {
     color: $secondary-text;
     background-color: $hover;
   }
+
   &:disabled {
     color: $main-text;
     background-color: $accent;
   }
 }
+
 .btn_secondary {
   @include btn_base();
   color: $main-text;
@@ -62,6 +66,7 @@ body {
     color: $hover;
     border: 2px solid $hover;
   }
+
   &:disabled {
     color: $main-text;
     border: 2px solid $main-text;
@@ -78,6 +83,7 @@ body {
     font-size: 48px;
   }
 }
+
 .subtitle {
   font-family: $font-family-title;
   font-size: 18px;
@@ -89,6 +95,7 @@ body {
     font-size: 32px;
   }
 }
+
 .text {
   font-family: $font-family-text;
   font-size: 16px;
