@@ -45,6 +45,7 @@ body {
 
 .btn_primary {
   @include btn_base();
+  justify-content: center;
   color: $main-text;
   background-color: $accent;
   border: 2px solid transparent;
@@ -63,13 +64,30 @@ body {
 
 .btn_secondary {
   @include btn_base();
+  justify-content: space-between;
   color: $main-text;
   border: 2px solid $main-text;
+
+  .arrow-icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+
+    @include mq(desktop) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
 
   &:hover,
   &:focus {
     color: $hover;
     border: 2px solid $hover;
+
+    .arrow-icon {
+      filter: invert(16%) sepia(96%) saturate(3238%) hue-rotate(222deg) brightness(91%) contrast(97%);
+    }
   }
 
   &:disabled {
@@ -132,10 +150,12 @@ body {
 
 .swiper {
   margin-bottom: 24px;
+
   @include mq(desktop) {
     margin-bottom: 32px;
   }
 }
+
 .swiper .swiper-wrapper {
   padding-bottom: 16px;
   @include mq(tablet) {
@@ -149,26 +169,28 @@ body {
   height: 4px;
   background-color: $main-text;
   opacity: 1;
+
   @include mq(tablet) {
     width: 8px;
     height: 8px;
   }
 }
+
 .swiper .swiper-pagination-bullet-active {
   background-color: $accent;
 }
+
 .swiper .swiper-pagination-fraction,
 .swiper-pagination-custom,
-.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 0 !important;
 }
-.swiper
-  .swiper-horizontal
-  > .swiper-pagination-bullets
-  .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
+
+.swiper .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 !important;
   margin-right: 8px !important;
+
 }
+
