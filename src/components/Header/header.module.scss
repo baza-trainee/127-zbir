@@ -63,6 +63,11 @@
 
   &_item {
     transition: color ease 0.3s;
+    color: $secondary-text;
+
+    @include mq(tablet) {
+      color: $main-text
+    }
 
     &:hover {
       color: $accent;
