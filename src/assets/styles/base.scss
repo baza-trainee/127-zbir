@@ -104,3 +104,46 @@ body {
     cursor: not-allowed;
   }
 }
+// Swiper
+
+.swiper {
+  margin-bottom: 24px;
+  @include mq(desktop) {
+    margin-bottom: 32px;
+  }
+}
+.swiper .swiper-wrapper {
+  padding-bottom: 16px;
+  @include mq(desktop) {
+    padding-bottom: 32px;
+  }
+}
+.swiper .swiper-pagination-bullet {
+  bottom: 0;
+  width: 4px;
+  height: 4px;
+  background-color: $main-text;
+  opacity: 1;
+  @include mq(desktop) {
+    width: 8px;
+    height: 8px;
+  }
+}
+.swiper .swiper-pagination-bullet-active {
+  background-color: $accent;
+}
+.swiper .swiper-pagination-fraction,
+.swiper-pagination-custom,
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal {
+  bottom: 0 !important;
+}
+.swiper
+  .swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 !important;
+  margin-right: 8px !important;
+}
