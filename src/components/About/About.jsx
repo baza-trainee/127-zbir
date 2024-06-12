@@ -7,7 +7,7 @@ const About = () => {
       <div className="container">
         <h2 className={`title ${S.about__title}`}>Про бригаду</h2>
         <Slider />
-        <p>
+        <p className="text">
           <span>
             <strong>
               127-ма окрема бригада територіальної оборони (127 ОБрТрО, в/ч
