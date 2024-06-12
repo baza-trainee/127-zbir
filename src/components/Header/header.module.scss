@@ -2,7 +2,11 @@
   position: absolute;
   right: 0;
   left: 0;
-  padding-top: 24px;
+  padding-top: 32px;
+
+  @include mq(mobile-only) {
+    padding-top: 24px;
+  }
 
   &_nav {
     position: relative;
@@ -62,7 +66,6 @@
 
     &:hover {
       color: $accent;
-      transition: color ease 0.3s;
     }
   }
 

@@ -29,7 +29,7 @@ const Header = () => {
     <header className={S.header}>
       <div className="container">
         <nav className={S.header_nav}>
-          <a href="#">
+          <a href="/">
             <img className={S.header_logo} src={logo} alt="Logo" />
           </a>
           <ul className={`${S.header_menu} ${isMenuOpen ? S.open : ""}`}>
