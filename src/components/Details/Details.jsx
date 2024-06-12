@@ -1,4 +1,6 @@
+import SupportShareButtons from "../SupportShareButtons/SupportShareButtons";
 import S from "./details.module.scss";
+
 const Details = () => {
   return (
     <section className="section" id="details">
@@ -34,10 +36,7 @@ const Details = () => {
           max={48000}
           className={S.details__progress}
         ></progress>
-        <div className={S.details__btn_wrapper}>
-          <button className="btn_primary">Підтримати</button>
-          <button className="btn_secondary">Поділитися</button>
-        </div>
+        <SupportShareButtons />
       </div>
     </section>
   );
