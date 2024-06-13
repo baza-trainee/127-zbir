@@ -27,6 +27,10 @@ body {
   max-width: 100%;
   width: 100%;
 
+  @include mq(tablet) {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
   @include mq(desktop) {
     padding-left: 64px;
     padding-right: 64px;
@@ -41,8 +45,10 @@ body {
 
 .btn_primary {
   @include btn_base();
+  justify-content: center;
   color: $main-text;
   background-color: $accent;
+  border: 2px solid transparent;
 
   &:hover,
   &:focus {
@@ -58,13 +64,30 @@ body {
 
 .btn_secondary {
   @include btn_base();
+  justify-content: space-between;
   color: $main-text;
   border: 2px solid $main-text;
+
+  .arrow-icon {
+    width: 24px;
+    height: 24px;
+    transition: all 0.3s ease-in-out;
+
+    @include mq(desktop) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+
 
   &:hover,
   &:focus {
     color: $hover;
     border: 2px solid $hover;
+
+    .arrow-icon {
+      filter: invert(16%) sepia(96%) saturate(3238%) hue-rotate(222deg) brightness(91%) contrast(97%);
+    }
   }
 
   &:disabled {
@@ -74,12 +97,17 @@ body {
 }
 
 .title {
+  margin-bottom: 32px;
   font-family: $font-family-title;
   font-size: 24px;
   font-weight: 500;
   line-height: normal;
 
+  @include mq(tablet) {
+    font-size: 40px;
+  }
   @include mq(desktop) {
+    margin-bottom: 56px;
     font-size: 48px;
   }
 }
@@ -91,6 +119,9 @@ body {
   line-height: normal;
   background-color: $accent;
 
+  @include mq(tablet) {
+    font-size: 28px;
+  }
   @include mq(desktop) {
     font-size: 32px;
   }
@@ -101,6 +132,9 @@ body {
   font-size: 16px;
   font-weight: 300;
 
+  @include mq(tablet) {
+    font-size: 28px;
+  }
   @include mq(desktop) {
     font-size: 32px;
     line-height: 1.38;
@@ -112,48 +146,51 @@ body {
   }
 }
 
-
 // Swiper
 
 .swiper {
   margin-bottom: 24px;
+
   @include mq(desktop) {
     margin-bottom: 32px;
   }
 }
+
 .swiper .swiper-wrapper {
   padding-bottom: 16px;
-  @include mq(desktop) {
+  @include mq(tablet) {
     padding-bottom: 32px;
   }
 }
+
 .swiper .swiper-pagination-bullet {
   bottom: 0;
   width: 4px;
   height: 4px;
   background-color: $main-text;
   opacity: 1;
-  @include mq(desktop) {
+
+  @include mq(tablet) {
     width: 8px;
     height: 8px;
   }
 }
+
 .swiper .swiper-pagination-bullet-active {
   background-color: $accent;
 }
+
 .swiper .swiper-pagination-fraction,
 .swiper-pagination-custom,
-.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 0 !important;
 }
-.swiper
-  .swiper-horizontal
-  > .swiper-pagination-bullets
-  .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
+
+.swiper .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 !important;
   margin-right: 8px !important;
+
 }
 
