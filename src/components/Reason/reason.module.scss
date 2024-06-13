@@ -6,8 +6,8 @@
 	&__item:not(:last-child) {
 		margin-bottom: calc(20px + (56 - 20) * ((100vw - 320px) / (1440 - 320)));
 	}
-	&__title {
-		background-color: $accent;
+	.subtitle {
+		// background-color: $accent;
 		padding: 2px;
 		display: inline-block;
 		font-size: calc(18px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
@@ -26,47 +26,43 @@
 			margin-bottom: calc(35px + (45 - 20) * ((100vw - 320px) / (1440 - 320)));
 		}
 	}
-	&__actions {
-		display: flex;
-		gap: 32px;
-	}
-	&__link {
-		text-align: center;
-		font-size: 32px;
-		letter-spacing: 2px;
-		font-weight: 500;
-		padding: 29px 32px;
-		width: 100%;
-		border: 2px solid $accent;
-		border-radius: 48px;
-		background-color: $accent;
-		transition: background-color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-					background-color: transparent;
-				}
-			}
-	}
-	&__link:nth-child(2) {
-		border: 2px solid #000;
-		text-align: left;
-		background-color: transparent;
-		position: relative;
-		transition: background-color 0.3s ease 0s;
-		@media (any-hover: hover) {
-			&:hover {
-				border: 2px solid $accent;
-					background-color: $accent;
-				}
-			}
-		&::before {
-			content: "";
-			position: absolute;
-			width: 15%;
-			height: 100%;
-			right: 0;
-			top: 0;
-			background: url("../Reason/img/arrow.svg") 30px no-repeat;
-		}
-	}
+	// &__actions {
+	// 	display: flex;
+	// 	gap: 32px;
+	// }
+	// &__link {
+	// 	text-align: center;
+	// 	font-size: calc(24px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
+	// 	letter-spacing: 2px;
+	// 	font-weight: 500;
+	// 	padding: 29px 32px;
+	// 	width: 100%;
+	// 	border: 2px solid $accent;
+	// 	border-radius: 48px;
+	// 	background-color: $accent;
+	// 	transition: background-color 0.3s ease 0s;
+	// 	@media (any-hover: hover) {
+	// 		&:hover {
+	// 			background-color: transparent;
+	// 		}
+	// 	}
+	// }
+	// &__link:nth-child(2) {
+	// 	border: 2px solid #000;
+	// 	text-align: left;
+	// 	background-color: transparent;
+	// 	transition: background-color 0.3s ease 0s;
+	// 	@media (any-hover: hover) {
+	// 		&:hover {
+	// 			border: 2px solid $accent;
+	// 			background-color: $accent;
+	// 		}
+	// 	}
+		
+	// }
 }
+// @media (max-width: 600.98px) {
+// 	.reason__link:nth-child(2){
+
+// 	}
+// }
