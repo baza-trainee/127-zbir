@@ -1,6 +1,6 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Keyboard } from "swiper/modules";
+import { Pagination, Keyboard, Autoplay } from "swiper/modules";
 import { data_slider } from "./helper/data.js";
 
 import "swiper/css";
@@ -17,7 +17,11 @@ export const Slider = () => {
         cssMode={true}
         loop={true}
         centeredSlides={true}
-        modules={[Pagination, Keyboard]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        modules={[Pagination, Keyboard, Autoplay]}
         className="swiper"
       >
         {data_slider.map((slide, index) => (

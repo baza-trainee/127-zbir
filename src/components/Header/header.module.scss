@@ -12,6 +12,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     font-size: 18px;
     line-height: 2.44;
   }
@@ -26,7 +27,6 @@
     @include mq(desktop) {
       width: 72px;
     }
-
   }
 
   &_menu {
@@ -59,14 +59,12 @@
     }
   }
 
-
-
   &_item {
     transition: color ease 0.3s;
     color: $secondary-text;
 
     @include mq(menuBreakPoint) {
-      color: $main-text
+      color: $main-text;
     }
 
     &:hover {
@@ -81,7 +79,8 @@
       display: block;
       cursor: pointer;
     }
-
   }
-
+  &_link {
+    padding: 10px 0;
+  }
 }
