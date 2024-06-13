@@ -14,6 +14,17 @@
       url("./img/hero-sm.jpg");
   }
 
+  @include mq(retina) {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+      url("./img/hero-lg@2x.jpg");
+
+    @include mq(mobile-only) {
+      background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+        url("./img/hero-sm@2x.jpg");
+    }
+  }
+
+
   @include mq(mobile) {
     padding-top: 56px;
     background-position: right;
