@@ -1,3 +1,4 @@
+import SupportShareButtons from "../SupportShareButtons/SupportShareButtons";
 import S from "./hero.module.scss";
 const Hero = () => {
   return (
