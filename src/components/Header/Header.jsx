@@ -38,6 +38,7 @@ const Header = () => {
                 <a
                   href={item.href}
                   onClick={(e) => handleMenuItemClick(e, item.href)}
+                  className={S.header_link}
                 >
                   {item.name}
                 </a>

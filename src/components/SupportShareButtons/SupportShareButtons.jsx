@@ -1,10 +1,7 @@
 import { useState } from "react";
-import arrowSvg from "../../assets/img/arrow-up-right.svg";
-import S from "../SupportShareButtons/SupportShareButtons.module.scss";
 import S from "./supportShareButtons.module.scss";
 
 const SupportShareButtons = ({ className }) => {
-
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -43,9 +40,9 @@ const SupportShareButtons = ({ className }) => {
               id="Vector"
               d="M14 34L34 14M34 14H14M34 14V34"
               stroke="currentColor"
-              stroke-width="4"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
             />
           </g>
         </svg>
@@ -65,6 +62,4 @@ const SupportShareButtons = ({ className }) => {
   );
 };
 
-
 export default SupportShareButtons;
-
