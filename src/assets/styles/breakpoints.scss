@@ -1,5 +1,5 @@
 //Breakpoints
-$mobile: 430px;
+$mobile: 431px;
 $tablet: 768px;
 $desktop: 1440px;
 
@@ -16,8 +16,14 @@ $desktop: 1440px;
     }
   }
 
-  @else if $screen ==tablet {
+  @else if $screen ==menuBreakPoint {
     @media screen and (max-width: $tablet) {
+      @content;
+    }
+  }
+
+  @else if $screen ==tablet {
+    @media screen and (min-width: $tablet) {
       @content;
     }
   }

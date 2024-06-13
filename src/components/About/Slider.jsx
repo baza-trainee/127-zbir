@@ -16,6 +16,7 @@ export const Slider = () => {
         keyboard={true}
         cssMode={true}
         loop={true}
+        centeredSlides={true}
         modules={[Pagination, Keyboard]}
         className="swiper"
       >
