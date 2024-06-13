@@ -1,7 +1,10 @@
 import { useState } from "react";
+import arrowSvg from "../../assets/img/arrow-up-right.svg";
+import S from "../SupportShareButtons/SupportShareButtons.module.scss";
 import S from "./supportShareButtons.module.scss";
 
 const SupportShareButtons = ({ className }) => {
+
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -62,4 +65,6 @@ const SupportShareButtons = ({ className }) => {
   );
 };
 
+
 export default SupportShareButtons;
+
