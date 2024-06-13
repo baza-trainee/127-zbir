@@ -13,6 +13,11 @@
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 
+  @include mq(tablet) {
+    padding: 16px 20px;
+    font-size: 24px;
+  }
+
   @include mq(desktop) {
     padding: 24px 32px;
     font-size: 32px;

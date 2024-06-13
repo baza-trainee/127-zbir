@@ -8,10 +8,7 @@ const Hero = () => {
           <h1 className={S.hero_title}>
             Збір на дрони для 127-мої бригади ТРО ЗСУ
           </h1>
-          <div className={S.hero_btns}>
-            <a href="#">Підтримати</a>
-            <a href="">Поділитися</a>
-          </div>
+          <SupportShareButtons className="btn_secondary hero" />
         </div>
       </div>
     </section>

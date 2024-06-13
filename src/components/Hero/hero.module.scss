@@ -4,13 +4,19 @@
   display: flex;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("../../assets/img/hero/hero-lg.jpg");
+    url("./img/hero-lg.jpg");
   background-size: cover;
   background-position: center;
 
   @include mq(mobile-only) {
+    padding-top: 56px;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-      url("../../assets/img/hero/hero-sm.jpg");
+      url("./img/hero-sm.jpg");
+  }
+
+  @include mq(mobile) {
+    padding-top: 56px;
+    background-position: right;
   }
 
   &_content {
@@ -30,18 +36,13 @@
     font-weight: 700;
     line-height: normal;
 
+    @include mq(mobile) {
+      font-size: 48px;
+    }
+
     @include mq(desktop) {
       font-size: 64px;
     }
   }
 
-  &_btns {
-    display: flex;
-    gap: 18px;
-
-    @include mq(mobile-only) {
-      flex-direction: column;
-      gap: 12px;
-    }
-  }
 }
