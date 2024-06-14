@@ -28,23 +28,23 @@ export const Slider = () => {
           <SwiperSlide key={index}>
             <picture>
               <source
-                srcSet={`${slide.about_webp} 1x, ${slide.webp_src_2x} 2x`}
+                srcSet={`${slide.webp_src} 1x, ${slide.webp_src_2x} 2x`}
                 media="(min-width: 1440px)"
                 type="image/webp"
               />
               <source
-                srcSet={`${slide.about_jpg} 1x, ${slide.src_2x} 2x`}
+                srcSet={`${slide.src} 1x, ${slide.src_2x} 2x`}
                 media="(min-width: 1440px)"
                 type="image/jpeg"
               />
               <source
-                srcSet={`${slide.about_webp_mob} 1x, ${slide.mob_webp_src_2x} 2x`}
+                srcSet={`${slide.mob_webp_src} 1x, ${slide.mob_webp_src_2x} 2x`}
                 type="image/webp"
               />
               <source srcSet={`${slide.mob_src_2x} 2x`} type="image/jpeg" />
               <img
                 className={S.about__img}
-                src={slide.about_jpg_mob}
+                src={slide.mob_src}
                 alt={slide.alt}
                 width={slide.width}
                 height={slide.height}
