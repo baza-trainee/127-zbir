@@ -12,7 +12,9 @@ export const Slider = () => {
   return (
     <>
       <Swiper
-        pagination={true}
+        pagination={{
+          clickable: true,
+        }}
         keyboard={true}
         cssMode={true}
         loop={true}
