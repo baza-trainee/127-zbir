@@ -42,6 +42,10 @@ body {
 .section {
   padding-top: 32px;
   padding-bottom: 32px;
+  @include mq(desktop) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
 }
 
 .btn_primary {
@@ -76,7 +80,6 @@ body {
     .arrow-icon {
       fill: $secondary-text;
     }
-
   }
 
   .arrow-icon {
@@ -89,12 +92,10 @@ body {
     }
   }
 
-
   &:hover,
   &:focus {
     color: $hover;
     border: 2px solid $hover;
-
   }
 
   &:disabled {
@@ -121,8 +122,11 @@ body {
 }
 
 .subtitle {
+  display: inline-block;
+  margin-bottom: calc(8px + (16 - 8) * ((100vw - 320px) / (1440 - 320)));
+  padding: 4px;
   font-family: $font-family-title;
-  font-size: 18px;
+  font-size: calc(18px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
   font-weight: 400;
   line-height: normal;
   background-color: $accent;
@@ -138,7 +142,7 @@ body {
 
 .text {
   font-family: $font-family-text;
-  font-size: 16px;
+  font-size: calc(16px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
   font-weight: 300;
 
   @include mq(tablet) {
@@ -193,14 +197,17 @@ body {
 
 .swiper .swiper-pagination-fraction,
 .swiper-pagination-custom,
-.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 0 !important;
 }
 
-.swiper .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+.swiper
+  .swiper-horizontal
+  > .swiper-pagination-bullets
+  .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
   margin: 0 !important;
   margin-right: 8px !important;
-
 }
