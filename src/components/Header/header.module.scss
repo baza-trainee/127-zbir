@@ -12,6 +12,7 @@
     position: relative;
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     font-size: 18px;
     line-height: 2.44;
   }
@@ -19,21 +20,20 @@
   &_logo {
     width: 72px;
 
-    @include mq(tablet) {
+    @include mq(menuBreakPoint) {
       width: 48px;
     }
 
     @include mq(desktop) {
       width: 72px;
     }
-
   }
 
   &_menu {
     display: flex;
     gap: 48px;
 
-    @include mq(tablet) {
+    @include mq(menuBreakPoint) {
       position: absolute;
       right: 0;
       top: 56px;
@@ -52,17 +52,20 @@
     }
 
     &.open {
-      @include mq(tablet) {
+      @include mq(menuBreakPoint) {
         height: 172px;
         opacity: 1;
       }
     }
   }
 
-
-
   &_item {
     transition: color ease 0.3s;
+    color: $secondary-text;
+
+    @include mq(menuBreakPoint) {
+      color: $main-text;
+    }
 
     &:hover {
       color: $accent;
@@ -72,11 +75,12 @@
   &_burger {
     display: none;
 
-    @include mq(tablet) {
+    @include mq(menuBreakPoint) {
       display: block;
       cursor: pointer;
     }
-
   }
-
+  &_link {
+    padding: 10px 0;
+  }
 }

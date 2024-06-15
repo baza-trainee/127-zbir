@@ -31,6 +31,7 @@ body {
     padding-left: 32px;
     padding-right: 32px;
   }
+
   @include mq(desktop) {
     padding-left: 64px;
     padding-right: 64px;
@@ -41,6 +42,11 @@ body {
 .section {
   padding-top: 32px;
   padding-bottom: 32px;
+
+  @include mq(desktop) {
+    padding-top: 96px;
+    padding-bottom: 96px;
+  }
 }
 
 .btn_primary {
@@ -68,10 +74,20 @@ body {
   color: $main-text;
   border: 2px solid $main-text;
 
+  &.hero {
+    color: $secondary-text;
+    border: 2px solid $secondary-text;
+
+    &:hover {
+      color: $accent;
+      border: 2px solid $accent;
+    }
+  }
+
+
   .arrow-icon {
     width: 24px;
     height: 24px;
-    transition: all 0.3s ease-in-out;
 
     @include mq(desktop) {
       width: 48px;
@@ -79,15 +95,10 @@ body {
     }
   }
 
-
   &:hover,
   &:focus {
     color: $hover;
     border: 2px solid $hover;
-
-    .arrow-icon {
-      filter: invert(16%) sepia(96%) saturate(3238%) hue-rotate(222deg) brightness(91%) contrast(97%);
-    }
   }
 
   &:disabled {
@@ -106,6 +117,7 @@ body {
   @include mq(tablet) {
     font-size: 40px;
   }
+
   @include mq(desktop) {
     margin-bottom: 56px;
     font-size: 48px;
@@ -113,8 +125,11 @@ body {
 }
 
 .subtitle {
+  display: inline-block;
+  margin-bottom: calc(8px + (16 - 8) * ((100vw - 320px) / (1440 - 320)));
+  padding: 4px;
   font-family: $font-family-title;
-  font-size: 18px;
+  font-size: calc(18px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
   font-weight: 400;
   line-height: normal;
   background-color: $accent;
@@ -122,6 +137,7 @@ body {
   @include mq(tablet) {
     font-size: 28px;
   }
+
   @include mq(desktop) {
     font-size: 32px;
   }
@@ -129,12 +145,13 @@ body {
 
 .text {
   font-family: $font-family-text;
-  font-size: 16px;
+  font-size: calc(16px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
   font-weight: 300;
 
   @include mq(tablet) {
     font-size: 28px;
   }
+
   @include mq(desktop) {
     font-size: 32px;
     line-height: 1.38;
@@ -151,13 +168,14 @@ body {
 .swiper {
   margin-bottom: 24px;
 
-  @include mq(desktop) {
+  @include mq(tablet) {
     margin-bottom: 32px;
   }
 }
 
 .swiper .swiper-wrapper {
   padding-bottom: 16px;
+
   @include mq(tablet) {
     padding-bottom: 32px;
   }
@@ -191,6 +209,4 @@ body {
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 !important;
   margin-right: 8px !important;
-
 }
-

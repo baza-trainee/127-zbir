@@ -29,15 +29,14 @@ const Header = () => {
     <header className={S.header}>
       <div className="container">
         <nav className={S.header_nav}>
-          <a href="/">
-            <img className={S.header_logo} src={logo} alt="Logo" />
-          </a>
+          <img className={S.header_logo} src={logo} alt="Logo" />
           <ul className={`${S.header_menu} ${isMenuOpen ? S.open : ""}`}>
             {menuItems.map((item, index) => (
               <li key={index} className={S.header_item}>
                 <a
                   href={item.href}
                   onClick={(e) => handleMenuItemClick(e, item.href)}
+                  className={S.header_link}
                 >
                   {item.name}
                 </a>
