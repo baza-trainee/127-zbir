@@ -1,5 +1,5 @@
 import React from "react";
-import socials from "../data";
+import socials from "../data.json";
 import S from "../modal.module.scss";
 
 export const SocialLinks = ({ url }) => {
@@ -27,7 +27,7 @@ export const SocialLinks = ({ url }) => {
     }
     return shareUrl;
   };
-
+  console.log(socials);
   return (
     <ul className={S.modal__list}>
       {socials.map((link, index) => (

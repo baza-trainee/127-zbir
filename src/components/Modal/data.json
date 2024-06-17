@@ -1,0 +1,35 @@
+[
+  {
+    "name": "Instagram",
+    "url": "/instagram.svg",
+    "alt": "Instagram icon",
+    "handler": "instagram",
+    "width": "51",
+    "height": "51",
+    "link": "https://www.instagram.com"
+  },
+  {
+    "name": "Facebook",
+    "url": "/facebook.svg",
+    "alt": "Facebook icon",
+    "handler": "facebook",
+    "width": "51",
+    "height": "51"
+  },
+  {
+    "name": "Telegram",
+    "url": "/telegram.svg",
+    "alt": "Telegram icon",
+    "handler": "telegram",
+    "width": "51",
+    "height": "51"
+  },
+  {
+    "name": "Linkedin",
+    "url": "/linkedin.svg",
+    "alt": "Linkedin icon",
+    "handler": "linkedin",
+    "width": "51",
+    "height": "51"
+  }
+]
