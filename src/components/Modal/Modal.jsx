@@ -43,21 +43,19 @@ export const Modal = ({ isOpen, onClose }) => {
   return createPortal(
     <div className={S.modal} onClick={handleBackdropClick}>
       <div className={S.modal__wrapper}>
-        <div className={S.modal__content}>
-          <button type="button" className={S.modal__close} onClick={onClose}>
-            <SpriteSVG name={"close"} />
-          </button>
-          <h3>Поділитися збором</h3>
-          <SocialLinks url={url} />
-          <button
-            type="button"
-            className={`btn_primary ${S.modal__btn}`}
-            onClick={copyToClipboard}
-            disabled={isCopied}
-          >
-            {isCopied ? "Скопійовано" : "Копіювати посилання"}
-          </button>
-        </div>
+        <button type="button" className={S.modal__close} onClick={onClose}>
+          <SpriteSVG name={"close"} />
+        </button>
+        <h3>Поділитися збором</h3>
+        <SocialLinks url={url} />
+        <button
+          type="button"
+          className={`btn_primary ${S.modal__btn}`}
+          onClick={copyToClipboard}
+          disabled={isCopied}
+        >
+          {isCopied ? "Скопійовано" : "Копіювати посилання"}
+        </button>
       </div>
     </div>,
     modalRoot
