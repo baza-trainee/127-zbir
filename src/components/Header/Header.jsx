@@ -1,6 +1,6 @@
 import { useState } from "react";
 import logo from "../../assets/img/logo.svg";
-import burger from "../../assets/img/menu.svg";
+import { SpriteSVG } from "../../assets/img/SpriteSVG";
 import S from "./header.module.scss";
 
 const menuItems = [
@@ -43,9 +43,13 @@ const Header = () => {
               </li>
             ))}
           </ul>
-          <div className={S.header_burger} onClick={toggleMenu}>
-            <img src={burger} alt="burger-menu" />
-          </div>
+          <button
+            type="button"
+            className={S.header_burger}
+            onClick={toggleMenu}
+          >
+            <SpriteSVG name={"burger"} />
+          </button>
         </nav>
       </div>
     </header>

@@ -1,0 +1,54 @@
+.modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: #0003;
+  backdrop-filter: blur(2px);
+  z-index: 100;
+  &__wrapper {
+    position: absolute;
+    bottom: auto;
+    right: auto;
+    left: 50%;
+    top: 50%;
+    max-width: 398px;
+    width: 100%;
+    padding: calc(16px + (24 - 20) * ((100vw - 320px) / (1440 - 320)));
+    transform: translate(-50%, -40%);
+    color: $main-text;
+    background-color: $white;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    row-gap: 83px;
+  }
+  h3 {
+    font-size: calc(24px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
+    text-align: center;
+    padding-top: 50px;
+  }
+  &__link {
+    display: flex;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    align-items: center;
+    gap: 40px;
+    img {
+      width: 100%;
+      margin-bottom: 16px;
+    }
+  }
+  &__close {
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+  }
+}
