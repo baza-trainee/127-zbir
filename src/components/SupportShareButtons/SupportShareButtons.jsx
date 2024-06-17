@@ -29,7 +29,9 @@ const SupportShareButtons = () => {
         Поділитися
         <img src={arrowSvg} alt="Arrow icon" className="arrow-icon" />
       </button>
-      <Modals />
+      {isModalOpen &&
+        <Modals closeModal={closeModal} />
+      };
     </div>
   );
 };

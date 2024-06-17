@@ -1,7 +1,7 @@
 import { useState } from "react";
 import S from "../Modals/Modals.module.scss";
 
-const Modals = () => {
+const Modals = ({closeModal}) => {
 	const [isCopyText, setIsCopyText] = useState(false);
 
 	const url = window.location.href;
@@ -35,14 +35,6 @@ const Modals = () => {
 		return shareUrl;
 	};
 
-
-	const openModal = () => {
-		setIsModalOpen(true);
-	};
-
-	const closeModal = () => {
-		setIsModalOpen(false);
-	};
 
 	const onClick = () => {
 		navigator.clipboard.writeText(url);
