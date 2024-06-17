@@ -24,7 +24,6 @@
     }
   }
 
-
   @include mq(mobile) {
     padding-top: 56px;
     background-position: right;
@@ -55,5 +54,4 @@
       font-size: 64px;
     }
   }
-
 }

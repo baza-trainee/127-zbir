@@ -3,7 +3,7 @@ import arrowSvg from "../../assets/img/arrow-up-right.svg";
 import Modals from "../Modals/Modals";
 import S from "../SupportShareButtons/supportShareButtons.module.scss";
 
-const SupportShareButtons = () => {
+const SupportShareButtons = ({ className }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const openModal = () => {
@@ -13,7 +13,6 @@ const SupportShareButtons = () => {
   const closeModal = () => {
     setIsModalOpen(false);
   };
-
 
   return (
     <div className={S.btns}>
@@ -25,13 +24,32 @@ const SupportShareButtons = () => {
       >
         Підтримати
       </a>
-      <button className="btn_secondary" onClick={openModal}>
+      <button
+        className={`btn_secondary ${className} ? 'hero' : ''`}
+        onClick={openModal}
+      >
         Поділитися
-        <img src={arrowSvg} alt="Arrow icon" className="arrow-icon" />
+        <svg
+          className="arrow-icon"
+          width="48"
+          height="48"
+          viewBox="0 0 48 48"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g id="arrow-up-right">
+            <path
+              id="Vector"
+              d="M14 34L34 14M34 14H14M34 14V34"
+              stroke="currentColor"
+              strokeWidth="4"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            />
+          </g>
+        </svg>
       </button>
-      {isModalOpen &&
-        <Modals closeModal={closeModal} />
-      };
+      {isModalOpen && <Modals closeModal={closeModal} />}
     </div>
   );
 };
