@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <footer className="section container">
       <p className={`text ${S.footer_text}`}>
-        &copy; Розробка Baza Trainee Ukraine 2024. Всі права захищені.
+        Розробка Baza Trainee Ukraine 2024 &copy; Всі права захищені.
       </p>
     </footer>
   );

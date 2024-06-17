@@ -1,7 +1,6 @@
 import { useState } from "react";
-import arrowSvg from "../../assets/img/arrow-up-right.svg";
-import Modals from "../Modals/Modals";
-import S from "../SupportShareButtons/supportShareButtons.module.scss";
+import { DONATION_URL } from "../../const/consts";
+import S from "./supportShareButtons.module.scss";
 
 const SupportShareButtons = ({ className }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -17,7 +16,7 @@ const SupportShareButtons = ({ className }) => {
   return (
     <div className={S.btns}>
       <a
-        href="https://www.monobank.ua"
+        href={DONATION_URL}
         className="btn_primary"
         target="_blank"
         rel="noopener noreferrer"
@@ -53,4 +52,5 @@ const SupportShareButtons = ({ className }) => {
     </div>
   );
 };
+
 export default SupportShareButtons;

@@ -8,7 +8,7 @@ const Hero = () => {
           <h1 className={S.hero_title}>
             Збір на дрони для 127-мої бригади ТРО ЗСУ
           </h1>
-          <SupportShareButtons className="btn_secondary hero" />
+          <SupportShareButtons className="hero" />
         </div>
       </div>
     </section>
