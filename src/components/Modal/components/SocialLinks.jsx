@@ -1,5 +1,5 @@
 import React from "react";
-import socialLinks from "../data.json";
+import socials from "../data";
 import S from "../modal.module.scss";
 
 export const SocialLinks = ({ url }) => {
@@ -30,7 +30,7 @@ export const SocialLinks = ({ url }) => {
 
   return (
     <ul className={S.modal__list}>
-      {socialLinks.map((link, index) => (
+      {socials.map((link, index) => (
         <li key={index} className={S.modal__item}>
           <a
             className={S.modal__link}
