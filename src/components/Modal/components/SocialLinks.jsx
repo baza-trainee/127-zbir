@@ -27,7 +27,6 @@ export const SocialLinks = ({ url }) => {
     }
     return shareUrl;
   };
-  console.log(socials);
   return (
     <ul className={S.modal__list}>
       {socials.map((link, index) => (

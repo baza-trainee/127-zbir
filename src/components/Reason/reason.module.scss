@@ -11,10 +11,8 @@
     border-left: 5px solid $accent;
     padding-left: calc(15px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
     margin-bottom: calc(32px + (82 - 32) * ((100vw - 320px) / (1440 - 320)));
-    p {
-      font-size: calc(20px + (36 - 20) * ((100vw - 320px) / (1440 - 320)));
-      font-weight: 300;
-      line-height: normal;
-    }
+    font-size: calc(20px + (36 - 20) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 300;
+    line-height: normal;
   }
 }
