@@ -34,11 +34,7 @@ export const SocialLinks = ({ url }) => {
         <li key={index} className={S.modal__item}>
           <a
             className={S.modal__link}
-            href={
-              link.handler === "instagram"
-                ? link.link
-                : handleShare(link.handler)
-            }
+            href={handleShare(link.handler)}
             target="_blank"
             rel="noreferrer"
           >
@@ -49,7 +45,6 @@ export const SocialLinks = ({ url }) => {
               width={link.width}
               height={link.height}
             />
-
             {link.name}
           </a>
         </li>

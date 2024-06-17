@@ -13,6 +13,10 @@
     right: auto;
     left: 50%;
     top: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 113px;
     max-width: 398px;
     width: 100%;
     padding: 0 16px 32px;
@@ -22,12 +26,7 @@
     border-radius: 12px;
     overflow: hidden;
   }
-  &__content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 60px;
-  }
+
   h3 {
     margin-top: 64px;
     font-family: $font-family-title;
@@ -38,28 +37,25 @@
   }
   &__list {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     gap: 20px;
-    max-width: 366px;
-    width: 100%;
   }
   &__item {
     flex: 1 0 0;
   }
   &__link {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
+    display: block;
     font-family: $font-family-text;
     font-size: 16px;
     font-style: normal;
     font-weight: 300;
     line-height: 1.75;
+    text-align: center;
   }
   &__img {
+    margin: 0 auto;
+    margin-bottom: 8px;
     width: 51px;
     height: 51px;
   }
@@ -99,19 +95,24 @@
   @include mq(desktop) {
     &__wrapper {
       max-width: 777px;
-    }
-    &__content {
+      padding-left: 122px;
+      padding-right: 122px;
       gap: 130px;
+      align-items: stretch;
+    }
+
+    h3 {
+      margin-top: 104px;
     }
     &__list {
-      max-width: 713px;
+      gap: 56px;
     }
     &__img {
+      margin-bottom: 16px;
       width: 102px;
       height: 102px;
     }
     &__link {
-      gap: 16px;
       font-size: 20px;
       line-height: 1.4;
     }

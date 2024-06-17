@@ -1,14 +1,5 @@
 [
   {
-    "name": "Instagram",
-    "url": "/instagram.svg",
-    "alt": "Instagram icon",
-    "handler": "instagram",
-    "width": "51",
-    "height": "51",
-    "link": "https://www.instagram.com"
-  },
-  {
     "name": "Facebook",
     "url": "/facebook.svg",
     "alt": "Facebook icon",
