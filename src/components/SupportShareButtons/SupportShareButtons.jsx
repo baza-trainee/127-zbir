@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { DONATION_URL } from "../../const/consts";
-import S from "./supportShareButtons.module.scss";
-import { Modal } from "../Modal/Modal";
 import { SpriteSVG } from "../../assets/img/SpriteSVG";
+import { Modal } from "../Modal/Modal";
+import S from "./supportShareButtons.module.scss";
 
 const SupportShareButtons = ({ className }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
