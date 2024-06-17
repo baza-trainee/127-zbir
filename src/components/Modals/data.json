@@ -1,0 +1,26 @@
+[
+  {
+    "name": "Instagram",
+    "url": "/src/assets/img/instagram_logo.svg",
+    "alt": "Instagram icon",
+    "handler": "instagram"
+  },
+  {
+    "name": "Facebook",
+    "url": "/src/assets/img/Facebok.svg",
+    "alt": "Facebook icon",
+    "handler": "facebook"
+  },
+  {
+    "name": "Telegram",
+    "url": "/src/assets/img/telegram.svg",
+    "alt": "Telegram icon",
+    "handler": "telegram"
+  },
+  {
+    "name": "Linkedin",
+    "url": "/src/assets/img/linkedin.svg",
+    "alt": "Linkedin icon",
+    "handler": "linkedin"
+  }
+]
