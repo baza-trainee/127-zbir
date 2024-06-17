@@ -1,7 +1,14 @@
+import { useState } from "react";
 import SupportShareButtons from "../SupportShareButtons/SupportShareButtons";
 import S from "./details.module.scss";
+import { formatNumber } from "../../helpers/formattedNum";
 
 const Details = () => {
+  const value = 2015.52;
+  const formattedValue = formatNumber(value);
+  const max = 48000;
+  const isComplete = value >= max;
+
   return (
     <section className="section" id="details">
       <div className="container">
@@ -20,7 +27,7 @@ const Details = () => {
           <p className={S.details__collect}>
             Зібрано:{" "}
             <span>
-              <strong> 0 грн </strong>
+              <strong>{formattedValue} грн </strong>
             </span>
           </p>
           <p className={S.details__collect}>
@@ -30,12 +37,18 @@ const Details = () => {
             </span>
           </p>
         </div>
-
         <progress
-          value={20000}
-          max={48000}
-          className={S.details__progress}
+          value={value}
+          max={max}
+          className={`${S.details__progress} ${
+            isComplete ? S.details__progress_complete : ""
+          }`}
         ></progress>
+        {isComplete && (
+          <p className={S.details__done}>
+            <strong>Збір завершено</strong>
+          </p>
+        )}
         <SupportShareButtons />
       </div>
     </section>

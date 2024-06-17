@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { DONATION_URL } from "../../const/consts";
 import S from "./supportShareButtons.module.scss";
 
 const SupportShareButtons = ({ className }) => {
@@ -15,7 +16,7 @@ const SupportShareButtons = ({ className }) => {
   return (
     <div className={S.btns}>
       <a
-        href="https://www.monobank.ua"
+        href={DONATION_URL}
         className="btn_primary"
         target="_blank"
         rel="noopener noreferrer"
