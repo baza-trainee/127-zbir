@@ -1,26 +1,35 @@
 [
   {
     "name": "Instagram",
-    "url": "/src/assets/img/instagram_logo.svg",
+    "url": "/src/assets/img/instagram.svg",
     "alt": "Instagram icon",
-    "handler": "instagram"
+    "handler": "instagram",
+    "width": "51",
+    "height": "51",
+    "link": "https://www.instagram.com"
   },
   {
     "name": "Facebook",
-    "url": "/src/assets/img/Facebok.svg",
+    "url": "/src/assets/img/facebook.svg",
     "alt": "Facebook icon",
-    "handler": "facebook"
+    "handler": "facebook",
+    "width": "51",
+    "height": "51"
   },
   {
     "name": "Telegram",
     "url": "/src/assets/img/telegram.svg",
     "alt": "Telegram icon",
-    "handler": "telegram"
+    "handler": "telegram",
+    "width": "51",
+    "height": "51"
   },
   {
     "name": "Linkedin",
     "url": "/src/assets/img/linkedin.svg",
     "alt": "Linkedin icon",
-    "handler": "linkedin"
+    "handler": "linkedin",
+    "width": "51",
+    "height": "51"
   }
 ]

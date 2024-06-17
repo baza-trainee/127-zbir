@@ -2,23 +2,54 @@ import React from "react";
 import socialLinks from "../data.json";
 import S from "../modal.module.scss";
 
-export const SocialLinks = () => {
-  //   const handleShare = (platform) => {
-  //     const urls = {
-  //       instagram: "https://www.instagram.com",
-  //       facebook: "https://www.facebook.com",
-  //       telegram: "https://web.telegram.org",
-  //       linkedin: "https://www.linkedin.com",
-  //     };
+export const SocialLinks = ({ url }) => {
+  const handleShare = (socialMedia) => {
+    let shareUrl = "";
 
-  //     return urls[platform];
-  //   };
+    switch (socialMedia) {
+      case "facebook":
+        shareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(
+          url
+        )}`;
+        break;
+      case "telegram":
+        shareUrl = `https://t.me/share/url?url=${encodeURIComponent(url)}`;
+        break;
+      case "linkedin":
+        shareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(
+          url
+        )}`;
+        break;
+
+      default:
+        console.log("Ця функція не підтримується в цьому браузері");
+        break;
+    }
+    return shareUrl;
+  };
+
   return (
-    <ul className={S.modal__link}>
+    <ul className={S.modal__list}>
       {socialLinks.map((link, index) => (
-        <li key={index}>
-          <a className="link" href={link.url} target="_blank" rel="noreferrer">
-            <img src={link.url} alt={link.alt} />
+        <li key={index} className={S.modal__item}>
+          <a
+            className={S.modal__link}
+            href={
+              link.handler === "instagram"
+                ? link.link
+                : handleShare(link.handler)
+            }
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src={link.url}
+              alt={link.alt}
+              className={S.modal__img}
+              width={link.width}
+              height={link.height}
+            />
+
             {link.name}
           </a>
         </li>

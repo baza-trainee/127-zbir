@@ -15,7 +15,7 @@
     top: 50%;
     max-width: 398px;
     width: 100%;
-    padding: calc(16px + (24 - 20) * ((100vw - 320px) / (1440 - 320)));
+    padding: 0 16px 32px;
     transform: translate(-50%, -40%);
     color: $main-text;
     background-color: $white;
@@ -25,30 +25,98 @@
   &__content {
     display: flex;
     flex-direction: column;
-    row-gap: 83px;
+    align-items: center;
+    gap: 60px;
   }
   h3 {
-    font-size: calc(24px + (32 - 20) * ((100vw - 320px) / (1440 - 320)));
+    margin-top: 64px;
+    font-family: $font-family-title;
+    font-size: calc(24px + (32 - 24) * ((100vw - 320px) / (1440 - 320)));
+    font-weight: 500;
+    line-height: normal;
     text-align: center;
-    padding-top: 50px;
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    max-width: 366px;
+    width: 100%;
+  }
+  &__item {
+    flex: 1 0 0;
   }
   &__link {
     display: flex;
-    text-align: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    width: 100%;
+    flex-direction: column;
     align-items: center;
-    gap: 40px;
-    img {
-      width: 100%;
-      margin-bottom: 16px;
-    }
+    gap: 8px;
+    font-family: $font-family-text;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 1.75;
+  }
+  &__img {
+    width: 51px;
+    height: 51px;
   }
   &__close {
     position: absolute;
-    right: 10px;
+    right: 16px;
+    top: 16px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  &__btn {
+    max-width: 336px;
+  }
+
+  @include mq(tablet) {
+    &__wrapper {
+      max-width: 500px;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+
+    &__list {
+      gap: 40px;
+    }
+
+    &__close {
+      right: 24px;
+      top: 24px;
+    }
+    &__btn {
+      max-width: 433px;
+    }
+  }
+  @include mq(desktop) {
+    &__wrapper {
+      max-width: 777px;
+    }
+    &__content {
+      gap: 130px;
+    }
+    &__list {
+      max-width: 713px;
+    }
+    &__img {
+      width: 102px;
+      height: 102px;
+    }
+    &__link {
+      gap: 16px;
+      font-size: 20px;
+      line-height: 1.4;
+    }
+    &__btn {
+      max-width: 533px;
+    }
   }
 }

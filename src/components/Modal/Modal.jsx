@@ -6,10 +6,11 @@ import { SpriteSVG } from "../../assets/img/SpriteSVG";
 
 const modalRoot = document.querySelector("#modal-root");
 
-export const Modal = ({ children, isOpen, onClose }) => {
+export const Modal = ({ isOpen, onClose }) => {
   const [isCopied, setIsCopied] = useState(false);
 
   const url = window.location.href;
+
   const handleBackdropClick = (e) => {
     e.target === e.currentTarget ? onClose() : null;
   };
@@ -47,10 +48,10 @@ export const Modal = ({ children, isOpen, onClose }) => {
             <SpriteSVG name={"close"} />
           </button>
           <h3>Поділитися збором</h3>
-          <SocialLinks />
+          <SocialLinks url={url} />
           <button
             type="button"
-            className="btn_primary"
+            className={`btn_primary ${S.modal__btn}`}
             onClick={copyToClipboard}
             disabled={isCopied}
           >
