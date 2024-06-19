@@ -7,6 +7,7 @@
   background: #0003;
   backdrop-filter: blur(2px);
   z-index: 100;
+
   &__wrapper {
     position: absolute;
     bottom: auto;
@@ -17,10 +18,9 @@
     flex-direction: column;
     align-items: center;
     gap: 113px;
-    max-width: 398px;
-    width: 100%;
+    width: 92.5%;
     padding: 0 16px 32px;
-    transform: translate(-50%, -40%);
+    transform: translate(-50%, -50%);
     color: $main-text;
     background-color: $white;
     border-radius: 12px;
@@ -35,15 +35,18 @@
     line-height: normal;
     text-align: center;
   }
+
   &__list {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 20px;
   }
+
   &__item {
     flex: 1 0 0;
   }
+
   &__link {
     display: block;
     font-family: $font-family-text;
@@ -53,24 +56,29 @@
     line-height: 1.75;
     text-align: center;
   }
+
   &__img {
     margin: 0 auto;
     margin-bottom: 8px;
     width: 51px;
     height: 51px;
   }
+
   &__close {
     position: absolute;
     right: 16px;
     top: 16px;
     cursor: pointer;
     transition: all 0.3s ease-in-out;
+
     &:hover {
       transform: scale(1.1);
     }
   }
+
   &__btn {
     max-width: 336px;
+    text-align: center;
   }
 
   @include mq(tablet) {
@@ -88,10 +96,12 @@
       right: 24px;
       top: 24px;
     }
+
     &__btn {
       max-width: 433px;
     }
   }
+
   @include mq(desktop) {
     &__wrapper {
       max-width: 777px;
@@ -104,18 +114,22 @@
     h3 {
       margin-top: 104px;
     }
+
     &__list {
       gap: 56px;
     }
+
     &__img {
       margin-bottom: 16px;
       width: 102px;
       height: 102px;
     }
+
     &__link {
       font-size: 20px;
       line-height: 1.4;
     }
+
     &__btn {
       max-width: 533px;
     }
