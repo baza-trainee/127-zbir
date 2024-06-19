@@ -20,6 +20,11 @@ body {
   background-color: $main-bg;
 }
 
+.favicon {
+  width: 16px;
+  height: 16px;
+}
+
 .container {
   margin: 0 auto;
   padding-left: 16px;
@@ -199,17 +204,13 @@ body {
 
 .swiper .swiper-pagination-fraction,
 .swiper-pagination-custom,
-.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal {
   bottom: 0 !important;
 }
 
-.swiper
-  .swiper-horizontal
-  > .swiper-pagination-bullets
-  .swiper-pagination-bullet,
-.swiper-pagination-horizontal.swiper-pagination-bullets
-  .swiper-pagination-bullet {
+.swiper .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 0 !important;
   margin-right: 8px !important;
 }
