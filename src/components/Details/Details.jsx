@@ -1,13 +1,19 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import SupportShareButtons from "../SupportShareButtons/SupportShareButtons";
-import S from "./details.module.scss";
+import getBalance from "../../helpers/getBalance";
 import { formatNumber } from "../../helpers/formattedNum";
+import S from "./details.module.scss";
 
 const Details = () => {
-  const value = 2015.52;
-  const formattedValue = formatNumber(value);
+  // const value = 2015.52;
+  const [balance, setBalance] = useState(0);
+  const formattedValue = formatNumber(balance);
   const max = 48000;
-  const isComplete = value >= max;
+  const isComplete = balance >= max;
+
+  useEffect(() => {
+    getBalance(setBalance);
+  }, []);
 
   return (
     <section className="section" id="details">
@@ -38,7 +44,7 @@ const Details = () => {
           </p>
         </div>
         <progress
-          value={value}
+          value={balance}
           max={max}
           className={`${S.details__progress} ${
             isComplete ? S.details__progress_complete : ""
