@@ -8,7 +8,7 @@ const Details = () => {
   // const value = 2015.52;
   const [balance, setBalance] = useState(0);
   const formattedValue = formatNumber(balance);
-  const max = 48000;
+  const max = 70000;
   const isComplete = balance >= max;
 
   useEffect(() => {
@@ -24,7 +24,7 @@ const Details = () => {
           <p className={`text ${S.details__text}`}>
             127-ма бригада ЗСУ розпочала збір коштів на придбання дронів, які є
             критично важливими для нашої обороноздатності. Ми прагнемо зібрати
-            48,000 грн для закупівлі сучасних дронів, які допоможуть нашим
+            70,000 грн для закупівлі сучасних дронів, які допоможуть нашим
             військовим у виконанні бойових завдань та забезпеченні безпеки наших
             захисників
           </p>
@@ -39,7 +39,7 @@ const Details = () => {
           <p className={S.details__collect}>
             з
             <span className={S.details__total}>
-              <strong className={S.details__total}> 48 000 грн</strong>
+              <strong className={S.details__total}> 70 000 грн</strong>
             </span>
           </p>
         </div>
