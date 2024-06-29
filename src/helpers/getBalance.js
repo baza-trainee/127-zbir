@@ -9,7 +9,6 @@ const getBalance = async (callback) => {
     if (response.ok) {
       const data = await response.json();
       const balance = Math.floor(data.amount / 100 || 0);
-      console.log(balance);
       callback(balance);
     } else {
       throw new Error(response.status.toString());
