@@ -1,5 +1,4 @@
-// take it to the Vercel
-const BALANSE_URL = `https://api.monobank.ua/bank/jar/4SF3SCEV1t84mjZzEGtRMogxzhLZA4zS`;
+import { BALANSE_URL } from "../const/consts";
 
 const getBalance = async (callback) => {
   try {
@@ -10,6 +9,7 @@ const getBalance = async (callback) => {
     if (response.ok) {
       const data = await response.json();
       const balance = Math.floor(data.amount / 100 || 0);
+      console.log(balance);
       callback(balance);
     } else {
       throw new Error(response.status.toString());
