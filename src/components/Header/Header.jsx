@@ -1,4 +1,5 @@
-import { useState } from "react";
+import React, { useEffect, useState } from "react";
+import SmoothScroll from "smooth-scroll";
 import logo from "../../assets/img/logo.svg";
 import { SpriteSVG } from "../../assets/img/SpriteSVG";
 import S from "./header.module.scss";
@@ -12,17 +13,16 @@ const menuItems = [
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
+  useEffect(() => {
+    const scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 800,
+      speedAsDuration: true,
+    });
+    return () => scroll.destroy();
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleMenuItemClick = (e, href) => {
-    e.preventDefault();
-    const targetElement = document.querySelector(href);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: "smooth" });
-      setIsMenuOpen(false);
-    }
   };
 
   return (
@@ -35,8 +35,8 @@ const Header = () => {
               <li key={index} className={S.header_item}>
                 <a
                   href={item.href}
-                  onClick={(e) => handleMenuItemClick(e, item.href)}
                   className={S.header_link}
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </a>
@@ -55,5 +55,4 @@ const Header = () => {
     </header>
   );
 };
-
 export default Header;
