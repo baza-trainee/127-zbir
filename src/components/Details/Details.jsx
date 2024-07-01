@@ -1,15 +1,20 @@
 import { useState, useEffect } from "react";
 import SupportShareButtons from "../SupportShareButtons/SupportShareButtons";
 import getBalance from "../../helpers/getBalance";
-import { formatNumber } from "../../helpers/formattedNum";
+import {
+  formatNumber,
+  formatNumberWithCommas,
+} from "../../helpers/formattedNum";
 import S from "./details.module.scss";
 
 const Details = () => {
-  // const value = 2015.52;
+  const max = 50000;
   const [balance, setBalance] = useState(0);
   const formattedValue = formatNumber(balance);
-  const max = 50000;
+  const formattedMax = formatNumberWithCommas(max);
+  const formattedMaxProgress = formatNumber(max);
   const isComplete = balance >= max;
+  console.log(isComplete);
 
   useEffect(() => {
     getBalance(setBalance);
@@ -23,10 +28,10 @@ const Details = () => {
           <div className={S.details__img}></div>
           <p className={`text ${S.details__text}`}>
             127-ма бригада ЗСУ розпочала збір коштів на придбання дронів, які є
-            критично важливими для нашої обороноздатності. Ми прагнемо зібрати
-            50,000 грн для закупівлі сучасних дронів, які допоможуть нашим
-            військовим у виконанні бойових завдань та забезпеченні безпеки наших
-            захисників
+            критично важливими для нашої обороноздатності. Ми прагнемо зібрати{" "}
+            {formattedMax} грн для закупівлі сучасних дронів, які допоможуть
+            нашим військовим у виконанні бойових завдань та забезпеченні безпеки
+            наших захисників
           </p>
         </div>
         <div className={S.details__collect_wrapper}>
@@ -39,7 +44,9 @@ const Details = () => {
           <p className={S.details__collect}>
             з{" "}
             <span className={S.details__total}>
-              <strong className={S.details__total}>50 000 грн</strong>
+              <strong className={S.details__total}>
+                {formattedMaxProgress} грн
+              </strong>
             </span>
           </p>
         </div>
@@ -47,7 +54,7 @@ const Details = () => {
           value={balance}
           max={max}
           className={`${S.details__progress} ${
-            isComplete ? S.details__progress_complete : ""
+            isComplete && S.details__progress_complete
           }`}
         ></progress>
         {isComplete && (
