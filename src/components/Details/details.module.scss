@@ -99,7 +99,7 @@
   }
 
   &__progress::-moz-progress-bar {
-    background-color: red;
+    background-color: $accent;
     border-radius: 48px;
 
     @include mq(desktop) {
@@ -108,6 +108,15 @@
   }
   &__progress_complete {
     margin-bottom: 16px;
+  }
+  &__progress_complete::-webkit-progress-bar {
+    background-color: $progress;
+  }
+  &__progress_complete::-webkit-progress-value {
+    background-color: $progress;
+  }
+  &__progress_complete::-moz-progress-bar {
+    background-color: $progress;
   }
   &__done {
     margin-bottom: calc(16px + (32 - 16) * ((100vw - 320px) / (1440 - 320)));
