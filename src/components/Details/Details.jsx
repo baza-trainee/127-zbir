@@ -14,7 +14,7 @@ const Details = () => {
   const formattedMax = formatNumberWithCommas(max);
   const formattedMaxProgress = formatNumber(max);
   const isComplete = balance >= max;
-  console.log(isComplete);
+
 
   useEffect(() => {
     getBalance(setBalance);
