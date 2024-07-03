@@ -78,45 +78,69 @@
     background-color: $main-bg;
   }
 
-  &__progress::-webkit-progress-bar {
-    height: 20px;
-    background-color: $main-bg;
-    border-radius: 48px;
-
-    @include mq(desktop) {
-      height: 44px;
-    }
-  }
-
-  &__progress::-webkit-progress-value {
-    height: 20px;
-    background-color: $accent;
-    border-radius: 48px;
-
-    @include mq(desktop) {
-      height: 44px;
-    }
-  }
-
-  &__progress::-moz-progress-bar {
-    background-color: $accent;
-    border-radius: 48px;
-
-    @include mq(desktop) {
-      height: 44px;
-    }
-  }
   &__progress_complete {
     margin-bottom: 16px;
   }
-  &__progress_complete::-webkit-progress-bar {
-    background-color: $progress;
+
+  &__progress[value] {
+    --w: 100%;
+    --color: linear-gradient(rgba(255, 227, 50) 0 0) 0 /
+        calc(var(--w) * 0.3 - 100%) 1px,
+      linear-gradient(rgba(255, 227, 50) 0 0) 0 / calc(var(--w) * 0.6 - 100%)
+        1px,
+      rgba(255, 227, 50);
+    --background: $main-bg;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid $main-text;
+    width: var(--w);
+    background: var(--background);
+    -webkit-mask: radial-gradient(circle closest-side, #000 98%, #0000 102%) 0/12.5%
+        100%,
+      linear-gradient(90deg, #000 50%, #0000 0) 8%/25% 100%;
+    mask: radial-gradient(circle closest-side, #000 98%, #0000 102%) 0/12.5%
+        100%,
+      linear-gradient(90deg, #000 100%, #0000 0) 8%/25% 100%;
   }
-  &__progress_complete::-webkit-progress-value {
-    background-color: $progress;
+  &__progress[value]::-webkit-progress-bar {
+    background: var(--background);
   }
-  &__progress_complete::-moz-progress-bar {
-    background-color: $progress;
+  &__progress[value]::-webkit-progress-value {
+    background: var(--color);
+  }
+  &__progress[value]::-moz-progress-bar {
+    background: var(--color);
+  }
+
+  &__progress_complete[value] {
+    --w: 100%;
+    --color: linear-gradient(rgba(50, 255, 83) 0 0) 0 /
+        calc(var(--w) * 0.3 - 100%) 1px,
+      linear-gradient(rgba(50, 255, 83) 0 0) 0 / calc(var(--w) * 0.6 - 100%) 1px,
+      rgba(50, 255, 83);
+    --background: $main-bg;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid $main-text;
+    width: var(--w);
+    background: var(--background);
+    -webkit-mask: radial-gradient(circle closest-side, #000 98%, #0000 102%) 0/12.5%
+        100%,
+      linear-gradient(90deg, #000 50%, #0000 0) 8%/25% 100%;
+    mask: radial-gradient(circle closest-side, #000 98%, #0000 102%) 0/12.5%
+        100%,
+      linear-gradient(90deg, #000 100%, #0000 0) 8%/25% 100%;
+  }
+  &__progress_complete[value]::-webkit-progress-bar {
+    background: var(--background);
+  }
+  &__progress_complete[value]::-webkit-progress-value {
+    background: var(--color);
+  }
+  &__progress_complete[value]::-moz-progress-bar {
+    background: var(--color);
   }
   &__done {
     margin-bottom: calc(16px + (32 - 16) * ((100vw - 320px) / (1440 - 320)));

@@ -15,7 +15,6 @@ const Details = () => {
   const formattedMaxProgress = formatNumber(max);
   const isComplete = balance >= max;
 
-
   useEffect(() => {
     getBalance(setBalance);
   }, []);
